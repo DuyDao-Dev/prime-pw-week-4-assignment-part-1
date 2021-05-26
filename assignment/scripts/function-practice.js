@@ -63,6 +63,7 @@ function getLast( array ) {
   return array[lastIndex];
 }
 console.log(getLast([1, 2, 3]));
+console.log(getLast([]));
 //Note to self: Try doing line 62 and 63 in one.
 
 
