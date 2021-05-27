@@ -1,4 +1,4 @@
-console.log('***** Function Practice *****')
+console.log('***** Function Practice *****');
 
 // Add the required code to complete the functions below
 // After _each_ function, use a console log to call the function
@@ -59,7 +59,7 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  let lastIndex = array.length-1
+  let lastIndex = array.length-1;
   return array[lastIndex];
 }
 console.log(getLast([1, 2, 3]));
