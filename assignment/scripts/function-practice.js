@@ -62,10 +62,16 @@ function getLast( array ) {
   let lastIndex = array.length-1;
   return array[lastIndex];
 }
-console.log(getLast([1, 2, 3]));
-console.log(getLast([]));
+console.log(getLast([5, 3, 10]));
+// console.log(getLast([])); This will show up as undefined is activated because no numbers
+//will replace array argument.
 //Note to self: Try doing line 62 and 63 in one.
 
+//Attempt 2
+// function getLast(array){
+//   return (array[array.length - 1]);
+// }
+// console.log(getLast([5, 3, 10]));// This one didn't work.
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -94,12 +100,14 @@ function isFirstLetter(letter, string) {
       return false;
     }
 }
+console.log( 'isFirstLetter - should say true: ', isFirstLetter('a', 'apple') );
+console.log( 'isFirstLetter - should say false: ', isFirstLetter('z', 'apple') );
 //Attempt 2 to shorten code
 // function isFirstLetter(letter, string) {
 //   return letter == string[0];
 // }
-console.log( 'isFirstLetter - should say true: ', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false: ', isFirstLetter('z', 'apple') );
+// console.log( 'isFirstLetter - should say true: ', isFirstLetter('a', 'apple') );
+// console.log( 'isFirstLetter - should say false: ', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 // function sumAll( ) {
@@ -107,12 +115,25 @@ console.log( 'isFirstLetter - should say false: ', isFirstLetter('z', 'apple') )
 //   // TODO: loop to add items
 //   return sum;
 // }
-function sumAll(numList) {
+
+//Attempt 1
+// function sumAll(numList) {
+//   let sum = 0;
+//   for (let i = 0; i < numList.length; i++) {
+//     sum += sumAll[i];
+//   }
+//   // TODO: loop to add items
+//   return sum;
+// }
+// console.log(sumAll(1, 2, 3));
+
+//Attempt 2
+function sumAll(numList){
   let sum = 0;
-  for (let i = 0; i < numList.length; i++) {
-    sum += sumAll[i];
+  for (var i = 0; i < numList.length; i++) {
+    console.log(`What is in here? ${numList} `);//Why isn't this log showing any results?
+    sum += numlist[i];
   }
-  // TODO: loop to add items
   return sum;
 }
 console.log(sumAll(1, 2, 3));
