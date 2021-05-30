@@ -131,12 +131,13 @@ console.log( 'isFirstLetter - should say false: ', isFirstLetter('z', 'apple') )
 function sumAll(numList){
   let sum = 0;
   for (var i = 0; i < numList.length; i++) {
+    sum += numList[i];
+    //console.log(sum);
     console.log(`What is in here? ${numList} `);//Why isn't this log showing any results?
-    sum += numlist[i];
   }
   return sum;
 }
-console.log(sumAll(1, 2, 3));
+console.log(sumAll([1, 2, 3]));
 //Work in progress for question 9.
 
 // 10. Function to return a new array of all positive (greater than zero)
